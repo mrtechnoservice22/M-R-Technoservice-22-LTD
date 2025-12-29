@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M&R Technoservice 22 LTD</title>
+    <meta name="description" content="M&R Technoservice 22 LTD – Hydraulic and mechanical systems supply, installation, and service in the UK.">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f5f5f5;
+            color: #222;
+        }
+        header {
+            background: #0b1c2d;
+            padding: 15px 30px;
+            color: #fff;
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .nav-btn {
+            background: none;
+            border: none;
+            color: #fff;
+            margin-left: 15px;
+            font-size: 14px;
+            cursor: pointer;
+        }
+        .nav-btn:hover {
+            text-decoration: underline;
+        }
+        section {
+            padding: 60px 30px;
+            max-width: 1000px;
+            margin: auto;
+            background: #fff;
+            margin-top: 20px;
+            border-radius: 6px;
+        }
+        h2 {
+            margin-top: 0;
+            color: #0b1c2d;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        footer {
+            background: #0b1c2d;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            margin-top: 30px;
+            font-size: 13px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <nav>
+        <div class="logo">M&R Technoservice 22 LTD</div>
+        <div>
+            <button class="nav-btn">HOME</button>
+            <button class="nav-btn">ABOUT</button>
+            <button class="nav-btn">CATALOG</button>
+            <button class="nav-btn">SERVICES</button>
+            <button class="nav-btn">CONTACT</button>
+        </div>
+    </nav>
+</header>
+
+<section id="about">
+    <h2>About Us</h2>
+    <p>
+        M&R Technoservice 22 LTD was established in 2025 in Aberdeen, Scotland, United Kingdom.
+        The company operates in the supply, sale, installation, and servicing of hydraulic and
+        mechanical systems for the oil & gas, marine, and industrial sectors.
+    </p>
+    <p>
+        Our mission is to provide high-quality technical services, reliable products,
+        and sustainable solutions. We are committed to delivering professional technical
+        support and dependable service to our customers.
+    </p>
+</section>
+
+<section id="catalog">
+    <h2>Catalog</h2>
+    <p>Main product groups included in the catalog:</p>
+    <ul>
+        <li>Hydraulic pumps and motors</li>
+        <li>Hydraulic cylinders</li>
+        <li>Hydraulic valves and distributors</li>
+        <li>Hydraulic hoses, pipes, and fittings</li>
+        <li>Filters and filter elements</li>
+        <li>Hydraulic oils and accessories</li>
+        <li>Mechanical spare parts and components</li>
+        <li>Bridge crane spare parts, including:
+            <ul>
+                <li>Cables and chains</li>
+                <li>Brake systems and brake pads</li>
+                <li>Electric motors and reducers</li>
+                <li>Trolleys and bridge mechanisms</li>
+                <li>Limit switches, sensors, and safety elements</li>
+            </ul>
+        </li>
+    </ul>
+</section>
+
+<section id="services">
+    <h2>Services</h2>
+    <ul>
+        <li>Supply, sale, and installation of hydraulic systems</li>
+        <li>Diagnostics, maintenance, and repair of hydraulic equipment</li>
+        <li>Service and technical support of mechanical equipment</li>
+        <li>Sale and operational delivery of spare parts</li>
+        <li>Planned technical maintenance and emergency service support</li>
+        <li>Provision of technical advice and solutions according to customer requirements</li>
+    </ul>
+</section>
+
+<section id="contact">
+    <h2>Contact Us</h2>
+    <p><strong>Address:</strong><br>
+        14 Pinewood Avenue, Aberdeen, AB15 8NB,<br>
+        Scotland, United Kingdom
+    </p>
+    <p><strong>Phone:</strong> 01224 547792</p>
+    <p><strong>Email:</strong> mr.techno.service.22@gmail.com</p>
+    <p><strong>Working Hours:</strong><br>
+        Monday – Friday: 9:00 AM to 6:00 PM
+    </p>
+</section>
+
+<footer>
+    © 2025 M&R Technoservice 22 LTD. All rights reserved.
+</footer>
+
+</body>
+</html>
