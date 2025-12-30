@@ -163,8 +163,9 @@ header#home p {
     box-shadow: 0 6px 18px rgba(0,0,0,0.4);
 }
 
-/* MOBILE FIX: Price link behaves like button */
-.nav-links a.nav-btn {
+/* MOBILE FIX: bütün nav-btn-lar eyni görünüşdə olsun */
+.nav-links a.nav-btn,
+.nav-links button.nav-btn {
     display: inline-block;
 }
 
@@ -172,7 +173,7 @@ header#home p {
 @media (max-width: 768px) {
     .nav-links {
         flex-direction: column;
-        display: none; /* hamburger üçün gizlədilir */
+        display: none;
         width: 100%;
         margin-top: 10px;
     }
@@ -180,9 +181,12 @@ header#home p {
         display: flex;
     }
     .nav-links button,
-    .nav-links a.nav-btn { /* bütün button və a alt-alta */
-        width: 100%;
+    .nav-links a.nav-btn {
+        width: 100%;          /* hamısı eyni genişlik */
+        max-width: 100%;
         text-align: center;
+        padding: 10px 0;      /* hamısı eyni padding */
+        box-sizing: border-box;
     }
     .hamburger { display: block; }
     header#home h1 { font-size: 2em; }
