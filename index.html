@@ -856,6 +856,28 @@
             }
         }
     </style>
+    <style>
+.whatsapp-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background-color: #25D366;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 30px;
+    font-size: 14px;
+    text-decoration: none;
+    margin-top: 15px; /* Bölmə sonunda bir az boşluq */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.whatsapp-btn i {
+    font-size: 18px;
+}
+.whatsapp-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+</style>
 </head>
 <body>
     <!-- NAVIGATION BAR -->
@@ -1060,6 +1082,14 @@
             </div>
         </div>
     </div>
+    <div class="page-section" id="home-section">
+    <!-- Home bölməsinin bütün məzmunu -->
+
+    <!-- WhatsApp düyməsi -->
+    <a href="https://wa.me/447849166141" target="_blank" class="whatsapp-btn">
+        <i class="fab fa-whatsapp"></i> Chat with us
+    </a>
+</div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <script>
