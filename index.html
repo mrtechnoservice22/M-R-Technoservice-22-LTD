@@ -1,459 +1,205 @@
 <!DOCTYPE html>
-<html lang="az">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>M&R IT Security Solutions</title>
-
-<!-- FONT AWESOME (WHATSAPP İKON) -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
-
+<title>M&R TechnoService 22 LTD</title>
 <style>
-/* ===== Əsas reset ===== */
-html, body {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    font-family: Arial, sans-serif;
-    background: linear-gradient(135deg, #000000 0%, #001a1a 100%);
-    color: #e0e0e0;
-    overflow-x: hidden;
-    display: flex;
-    flex-direction: column;
-}
-
-/* NAVBAR */
-.navbar {
-    background-color: rgba(0,0,0,0.8);
-    padding: 10px 20px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-    border-bottom: 1px solid rgba(0,255,255,0.1);
-    flex-wrap: wrap;
-    position: relative;
-    z-index: 100;
-}
-
-.logo-space {
-    min-width: 240px;
-    display: flex;
-    align-items: center;
-}
-
-.logo-placeholder {
-    color: white;
-    font-size: 16px;
-    font-weight: bold;
-    background-color: rgba(0,0,0,0.8);
-    padding: 6px 12px;
-    border-radius: 10px;
-    text-align: center;
-    border: 2px solid cyan;
-    box-shadow: 0 0 10px cyan;
-    cursor: default;
-    height: 34px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.nav-center {
-    display: flex;
-    gap: 6px;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    flex: 1;
-}
-
-.nav-btn, .lang-btn {
-    background-color: rgba(0,0,0,0.8);
-    color: white;
-    border: 2px solid cyan;
-    border-radius: 10px;
-    padding: 6px 12px;
-    font-size: 12px;
-    font-weight: bold;
-    cursor: pointer;
-    min-width: 85px;
-    height: 34px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 4px;
-    position: relative;
-    text-decoration: none;
-}
-
-.nav-btn:hover, .lang-btn:hover {
-    background: white;
-    color: black;
-    transform: scale(1.05);
-    box-shadow: 0 0 15px cyan;
-}
-
-.nav-btn.active, .lang-btn.active {
-    background: black !important;
-    color: white !important;
-    border-color: yellow !important;
-    box-shadow: 0 0 10px yellow !important;
-}
-
-.nav-right {
-    display: flex;
-    gap: 6px;
-    align-items: center;
-    margin-left: auto;
-}
-
-.whatsapp-nav {
-    background-color: #25D366 !important;
-    border-color: #25D366 !important;
-    color: white !important;
-}
-
-/* HEADER FULLSCREEN */
-header {
-    background-image: url('https://pbs.twimg.com/media/FKokOGyWYAYqUao.jpg');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    text-align: center;
-}
-
-header h1 {
-    font-size: 3em;
-    margin: 0;
-}
-
-header p {
-    font-size: 1.2em;
-    margin: 10px 0 20px 0;
-}
-
-/* PAGE SECTIONS */
-.page-section {
-    display: none;
-    flex-direction: column;
-    flex-grow: 1;
-    width: 100%;
-}
-
-.page-section.active {
-    display: flex;
-}
-
-.content {
-    padding: 30px 20px;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    flex-grow: 1;
-}
-
-.content-box {
-    max-width: 100%;
-    margin: 30px auto;
-    background-color: rgba(0,20,20,0.7);
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.3);
-    border: 1px solid rgba(0,255,255,0.1);
-    text-align: left;
-}
-
-.content-box h2 {
-    color: #00ffff;
-    margin-bottom: 15px;
-    border-bottom: 1px solid rgba(0,255,255,0.3);
-    padding-bottom: 8px;
-    font-size: 18px;
-}
-
-.content-box p, .content-box ul {
-    color: #cccccc;
-    font-size: 13px;
-    line-height: 1.6;
-}
-
-.content-box ul {
-    margin-left: 20px;
-}
-
-/* CONTACT SECTION */
-.split-container {
-    display: flex;
-    flex-direction: row;
-    padding: 0 15px;
-}
-
-.left-side {
-    flex: 1;
-    background: #000;
-    border-radius: 12px;
-    border: 2px solid rgba(0,255,255,0.3);
-    margin: 10px;
-    height: 400px;
-}
-
-.right-side {
-    flex: 1;
-    margin: 10px;
-    padding: 20px;
-}
-
-.contact-info {
-    background-color: rgba(0,20,20,0.7);
-    padding: 15px 20px;
-    border-radius: 12px;
-    border: 1px solid rgba(0,255,255,0.15);
-}
-
-.contact-item {
-    margin-bottom: 15px;
-    padding-bottom: 8px;
-    border-bottom: 1px solid rgba(0,255,255,0.15);
-    position: relative;
-}
-
-.contact-item h3 {
-    color: #00ffff;
-    font-size: 14px;
-    margin-bottom: 8px;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    position: relative;
-    padding-left: 50px;
-}
-
-.contact-icon-container {
-    position: absolute;
-    left: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 35px;
-    height: 35px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.contact-icon-ring {
-    position: absolute;
-    width: 40px;
-    height: 40px;
-    border: 2px solid #00ffff;
-    border-radius: 50%;
-    box-shadow: 0 0 6px #00ffff;
-    opacity: 0.8;
-}
-
-.contact-item i {
-    position: relative;
-    z-index: 10;
-    color: #fff;
-    font-size: 18px;
-}
-
-.contact-item p {
-    color: #cccccc;
-    margin-left: 50px;
-    font-size: 13px;
-}
-
-/* WHATSAPP BUTTON */
-.whatsapp-btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    background-color: #25D366;
-    color: white;
-    padding: 10px 15px;
-    border-radius: 30px;
-    font-size: 14px;
-    text-decoration: none;
-    margin-top: 15px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.whatsapp-btn i {
-    font-size: 18px;
-}
-
-.whatsapp-btn:hover {
-    transform: scale(1.05);
-    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-}
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background: #000;
+        color: #e0e0e0;
+    }
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+        background-color: rgba(0,0,0,0.8);
+        border-bottom: 1px solid rgba(0,255,255,0.2);
+        flex-wrap: wrap;
+    }
+    .logo-placeholder {
+        color: white;
+        font-weight: bold;
+        font-size: 16px;
+        padding: 6px 12px;
+        border: 2px solid cyan;
+        border-radius: 10px;
+        box-shadow: 0 0 10px cyan;
+        cursor: default;
+    }
+    .nav-center, .nav-right {
+        display: flex;
+        gap: 6px;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+    .nav-btn, .lang-btn {
+        background-color: rgba(0,0,0,0.8);
+        color: white;
+        border: 2px solid cyan;
+        border-radius: 10px;
+        padding: 6px 12px;
+        font-size: 12px;
+        font-weight: bold;
+        cursor: pointer;
+        box-shadow: 0 0 10px cyan;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        height: 34px;
+    }
+    .nav-btn:hover, .lang-btn:hover {
+        background: white;
+        color: black;
+        transform: scale(1.05);
+        box-shadow: 0 0 15px cyan;
+    }
+    .page-section {
+        display: none;
+        padding: 40px 20px;
+        min-height: calc(100vh - 70px);
+    }
+    .page-section.active { display: block; }
+    header {
+        background-image: url('https://pbs.twimg.com/media/FKokOGyWYAYqUao.jpg');
+        background-position: center;
+        background-size: cover;
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        color: white;
+    }
+    header h1 { font-size: 3em; margin: 0; }
+    header p { font-size: 1.2em; margin: 10px 0 20px 0; }
+    .content-box {
+        background: rgba(0,20,20,0.7);
+        padding: 20px;
+        border-radius: 12px;
+        max-width: 900px;
+        margin: auto;
+    }
+    .content-box h2 { color: #00ffff; margin-bottom: 15px; }
+    .content-box p, .content-box li { color: #cccccc; font-size: 14px; line-height: 1.6; }
 </style>
 </head>
 <body>
 
-<!-- NAVIGATION BAR -->
+<!-- NAVBAR -->
 <nav class="navbar">
-    <div class="logo-space">
-        <div class="logo-placeholder">M&R Technoservice 22 LTD</div>
-    </div>
+    <div class="logo-placeholder">M&R Technoservice 22 LTD</div>
     <div class="nav-center">
         <button class="nav-btn active" data-section="home">Home</button>
         <button class="nav-btn" data-section="about">About</button>
         <button class="nav-btn" data-section="catalog">Catalog</button>
         <button class="nav-btn" data-section="services">Services</button>
-        <button class="nav-btn" data-section="projects">Price</button>
+        <a href="https://github.com/rasim88ismayilov-hub/M-R-Technoservice-22-LTD/raw/main/M%26R%20TechnoService%2022%20LTD%20Hikvision%20price%20list.pdf.pdf" target="_blank" class="nav-btn">Price</a>
         <button class="nav-btn" data-section="contact">Contact</button>
-        <a href="https://wa.me/447849166141" target="_blank" class="nav-btn whatsapp-nav">
-            <i class="fab fa-whatsapp"></i> WhatsApp
-        </a>
-        <a href="#" target="_blank" class="nav-btn whatsapp-nav">
-            <i class="fas fa-file-pdf"></i> PDF
-        </a>
     </div>
     <div class="nav-right">
-        <button class="lang-btn active" onclick="changeLanguage('eng')" id="eng-btn">ENG</button>
-        <button class="lang-btn" onclick="changeLanguage('ru')" id="rus-btn">RUS</button>
+        <button class="lang-btn" onclick="changeLanguage('eng')" id="eng-btn">ENG</button>
+        <button class="lang-btn" onclick="changeLanguage('rus')" id="rus-btn">RUS</button>
     </div>
 </nav>
 
-<!-- HEADER -->
-<header>
-    <h1>Welcome to Our IT, Restaurant & Security, CCTV Systems Solutions</h1>
-    <p>Reliable products and professional support for your business</p>
-</header>
+<!-- HOME SECTION -->
+<div class="page-section active" id="home-section">
+    <header>
+        <h1>Welcome to Our IT, Restaurant & Security, CCTV Systems Solutions</h1>
+        <p>Reliable products and professional support for your business</p>
+    </header>
+</div>
 
-<!-- PAGE SECTIONS -->
-<div class="page-section active" id="home-section"></div>
-
+<!-- ABOUT SECTION -->
 <div class="page-section" id="about-section">
-    <div class="content">
-        <div class="content-box">
-            <h2 data-translate="aboutTitle"></h2>
-            <p data-translate="aboutText1">
-                M&R Technoservice 22 LTD, established in 2025, specializes in IT security systems. Our core business includes providing high-quality cybersecurity solutions, network security, and system monitoring services. Despite being a newly established company, our professional team ensures reliable products and prompt support to maintain uninterrupted operations for our clients.
-            </p>
-            <p data-translate="aboutText2">
-                Our mission is to provide high-quality technical services, reliable products, and sustainable solutions. We are committed to delivering professional support and expert services to our clients.
-            </p>
-        </div>
+    <div class="content-box">
+        <h2>About Us</h2>
+        <p>M&R Technoservice 22 LTD, established in 2025, specializes in IT security, restaurant systems, and CCTV solutions. Our professional team ensures reliable products and prompt support for uninterrupted business operations.</p>
+        <p>Our mission is to provide high-quality technical services, reliable products, and sustainable solutions. We are committed to delivering professional support and expert services to our clients.</p>
     </div>
 </div>
 
+<!-- CATALOG SECTION -->
 <div class="page-section" id="catalog-section">
-    <div class="content">
-        <div class="content-box">
-            <h2 data-translate="catalogTitle"></h2>
-            <p data-translate="catalogText">Main Product Categories in the Catalog:</p>
-            <ul>
-                <li data-translate="catalogItem1">IT Systems</li>
-                <li data-translate="catalogItem2">Restaurant Systems</li>
-                <li data-translate="catalogItem3">Security Systems</li>
-                <li data-translate="catalogItem4">Network Solutions and Accessories</li>
-                <li data-translate="catalogItem5">Software and Applications</li>
-                <li data-translate="catalogItem6">Hardware Components</li>
-                <li data-translate="catalogItem7">Technical Support Services</li>
-                <li data-translate="catalogItem8">Security and Monitoring Equipment, including:
-                    <ul style="margin-left: 20px; margin-top: 5px;">
-                        <li data-translate="catalogSubItem1">CCTV Cameras and Recorders</li>
-                        <li data-translate="catalogSubItem2">Alarm Systems and Sensors</li>
-                        <li data-translate="catalogSubItem3">Access Control Systems</li>
-                        <li data-translate="catalogSubItem4">POS and Restaurant Management Systems</li>
-                        <li data-translate="catalogSubItem5">Networking Cables and Switches</li>
-                    </ul>
-                </li>
-            </ul>
-        </div>
+    <div class="content-box">
+        <h2>Catalog</h2>
+        <ul>
+            <li>IT Systems</li>
+            <li>Restaurant Systems</li>
+            <li>Security Systems</li>
+            <li>Network Solutions and Accessories</li>
+            <li>Software and Applications</li>
+            <li>Hardware Components</li>
+            <li>Technical Support Services</li>
+            <li>Security and Monitoring Equipment, including:
+                <ul>
+                    <li>CCTV Cameras and Recorders</li>
+                    <li>Alarm Systems and Sensors</li>
+                    <li>Access Control Systems</li>
+                    <li>POS and Restaurant Management Systems</li>
+                    <li>Networking Cables and Switches</li>
+                </ul>
+            </li>
+        </ul>
     </div>
 </div>
 
+<!-- SERVICES SECTION -->
 <div class="page-section" id="services-section">
-    <div class="content">
-        <div class="content-box">
-            <h2 data-translate="servicesTitle"></h2>
-            <p data-translate="servicesText">Our main service areas are as follows:</p>
-            <ul>
-                <li data-translate="serviceItem1">Supply, Sales, and Installation of IT, Restaurant, and Security Systems</li>
-                <li data-translate="serviceItem2">Diagnostics, Inspection, and Maintenance of IT, Restaurant, and Security Equipment</li>
-                <li data-translate="serviceItem3">Service and Technical Support for IT, Restaurant, and Security Systems</li>
-                <li data-translate="serviceItem4">Sale and Prompt Delivery of Spare Parts for IT, Restaurant, and Security Systems</li>
-                <li data-translate="serviceItem5">Planned Maintenance and Emergency Support for IT, Restaurant, and Security Systems</li>
-                <li data-translate="serviceItem6">Technical Consultation and Solutions Tailored to Customer Requirements in IT, Restaurant, and Security Systems</li>
-            </ul>
-        </div>
+    <div class="content-box">
+        <h2>Services</h2>
+        <ul>
+            <li>Supply, Sales, and Installation of IT, Restaurant, and Security Systems</li>
+            <li>Diagnostics, Inspection, and Maintenance of IT, Restaurant, and Security Equipment</li>
+            <li>Service and Technical Support for IT, Restaurant, and Security Systems</li>
+            <li>Sale and Prompt Delivery of Spare Parts for IT, Restaurant, and Security Systems</li>
+            <li>Planned Maintenance and Emergency Support for IT, Restaurant, and Security Systems</li>
+            <li>Technical Consultation and Solutions Tailored to Customer Requirements</li>
+        </ul>
     </div>
 </div>
 
+<!-- CONTACT SECTION -->
 <div class="page-section" id="contact-section">
-    <div class="split-container">
-        <div class="left-side" id="cube-animation"></div>
-        <div class="right-side">
-            <div class="contact-info">
-                <div class="contact-item address-icon">
-                    <div class="contact-icon-container">
-                        <div class="contact-icon-ring"></div>
-                        <i class="fas fa-map-marker-alt"></i>
-                    </div>
-                    <h3>Address</h3>
-                    <p><strong>14 Pinewood Avenue, Aberdeen AB15 8NB, Scotland, UK</strong></p>
-                </div>
-                <div class="contact-item phone-icon">
-                    <div class="contact-icon-container">
-                        <div class="contact-icon-ring"></div>
-                        <i class="fas fa-phone"></i>
-                    </div>
-                    <h3>Phone</h3>
-                    <p><strong>01224 5477923</strong></p>
-                </div>
-                <div class="contact-item email-icon">
-                    <div class="contact-icon-container">
-                        <div class="contact-icon-ring"></div>
-                        <i class="fas fa-envelope"></i>
-                    </div>
-                    <h3>Email</h3>
-                    <p><strong>mr.techno.service.22@gmail.com</strong></p>
-                </div>
-                <div class="contact-item hours-icon">
-                    <div class="contact-icon-container">
-                        <div class="contact-icon-ring"></div>
-                        <i class="fas fa-clock"></i>
-                    </div>
-                    <h3>Working Hours</h3>
-                    <p><strong>Monday - Friday: 9:00 AM to 6:00 PM</strong></p>
-                </div>
-            </div>
-        </div>
+    <div class="content-box">
+        <h2>Contact Us</h2>
+        <p><strong>Address:</strong> 14 Pinewood Avenue, Aberdeen AB15 8NB, Scotland, UK</p>
+        <p><strong>Phone:</strong> 01224 5477923</p>
+        <p><strong>Email:</strong> mr.techno.service.22@gmail.com</p>
+        <p><strong>Working Hours:</strong> Monday - Friday: 9:00 AM to 6:00 PM</p>
     </div>
 </div>
 
-<!-- THREE.JS CUBE SCRIPT -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 <script>
-// Three.js cube animation or other scripts burada olacaq
-</script>
+    // NAVIGATION BUTTONS FUNCTIONALITY
+    const navButtons = document.querySelectorAll('.nav-btn[data-section]');
+    const sections = document.querySelectorAll('.page-section');
 
-<!-- LANGUAGE SWITCH -->
-<script>
-const translations = { 
-    eng: {...}, 
-    ru: {...} 
-};
+    navButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+            // Remove active from buttons
+            navButtons.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
 
-function changeLanguage(lang){
-    document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
-    document.getElementById(lang+'-btn').classList.add('active');
-    document.querySelectorAll('[data-translate]').forEach(el=>{
-        const key = el.getAttribute('data-translate');
-        if(translations[lang][key]) el.innerHTML = translations[lang][key];
+            // Show relevant section
+            const sectionId = btn.getAttribute('data-section') + '-section';
+            sections.forEach(sec => sec.classList.remove('active'));
+            const activeSec = document.getElementById(sectionId);
+            if(activeSec) activeSec.classList.add('active');
+        });
     });
-}
+
+    // LANGUAGE SWITCHER (simple demo)
+    function changeLanguage(lang){
+        alert("Language switched to: " + lang + ". Implement translation logic here.");
+    }
 </script>
 
 </body>
