@@ -1,15 +1,13 @@
 <!DOCTYPE html>
-<html lang="az">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>M&R IT Security Solutions</title>
 
-<!-- FONT AWESOME (WHATSAPP İKON) -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
 
 <style>
-/* ===== Əsas reset ===== */
 html, body {
     margin: 0;
     padding: 0;
@@ -17,448 +15,252 @@ html, body {
     font-family: Arial, sans-serif;
     background: linear-gradient(135deg, #000000 0%, #001a1a 100%);
     color: #e0e0e0;
-    overflow-x: hidden;
-    display: flex;
-    flex-direction: column;
 }
 
 /* NAVBAR */
 .navbar {
-    background-color: rgba(0,0,0,0.8);
+    background-color: rgba(0,0,0,0.85);
     padding: 10px 20px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-    border-bottom: 1px solid rgba(0,255,255,0.1);
-    flex-wrap: wrap;
-    position: relative;
-    z-index: 100;
-}
-
-.logo-space {
-    min-width: 240px;
-    display: flex;
-    align-items: center;
+    border-bottom: 1px solid rgba(0,255,255,0.2);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
 }
 
 .logo-placeholder {
     color: white;
-    font-size: 16px;
     font-weight: bold;
-    background-color: rgba(0,0,0,0.8);
+    border: 2px solid cyan;
     padding: 6px 12px;
     border-radius: 10px;
-    text-align: center;
-    border: 2px solid cyan;
     box-shadow: 0 0 10px cyan;
-    cursor: default;
-    height: 34px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 .nav-center {
     display: flex;
-    gap: 6px;
-    align-items: center;
-    justify-content: center;
+    gap: 8px;
     flex-wrap: wrap;
-    flex: 1;
 }
 
-.nav-btn, .lang-btn {
-    background-color: rgba(0,0,0,0.8);
+.nav-btn {
+    background: black;
     color: white;
     border: 2px solid cyan;
     border-radius: 10px;
-    padding: 6px 12px;
-    font-size: 12px;
-    font-weight: bold;
+    padding: 6px 14px;
     cursor: pointer;
-    min-width: 85px;
-    height: 34px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 4px;
-    position: relative;
+    font-size: 13px;
     text-decoration: none;
 }
 
-.nav-btn:hover, .lang-btn:hover {
+.nav-btn:hover {
     background: white;
     color: black;
-    transform: scale(1.05);
-    box-shadow: 0 0 15px cyan;
-}
-
-.nav-btn.active, .lang-btn.active {
-    background: black !important;
-    color: white !important;
-    border-color: yellow !important;
-    box-shadow: 0 0 10px yellow !important;
-}
-
-.nav-right {
-    display: flex;
-    gap: 6px;
-    align-items: center;
-    margin-left: auto;
+    box-shadow: 0 0 10px cyan;
 }
 
 .whatsapp-nav {
-    background-color: #25D366 !important;
-    border-color: #25D366 !important;
-    color: white !important;
+    background-color: #25D366;
+    border-color: #25D366;
 }
 
-/* HEADER FULLSCREEN */
+/* HEADER */
 header {
     background-image: url('https://pbs.twimg.com/media/FKokOGyWYAYqUao.jpg');
-    background-position: center;
-    background-repeat: no-repeat;
     background-size: cover;
-    width: 100%;
+    background-position: center;
     height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    color: white;
     text-align: center;
+    padding-top: 80px;
 }
 
 header h1 {
     font-size: 3em;
     margin: 0;
+    color: #2f2f2f; /* TÜND BOZ */
 }
 
 header p {
     font-size: 1.2em;
-    margin: 10px 0 20px 0;
+    margin-top: 15px;
+    color: #444; /* TÜND BOZ */
 }
 
-/* PAGE SECTIONS */
+/* SECTIONS */
 .page-section {
     display: none;
-    flex-direction: column;
-    flex-grow: 1;
-    width: 100%;
+    padding: 110px 20px 40px;
 }
 
 .page-section.active {
-    display: flex;
-}
-
-.content {
-    padding: 30px 20px;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    flex-grow: 1;
+    display: block;
 }
 
 .content-box {
-    max-width: 100%;
-    margin: 30px auto;
-    background-color: rgba(0,20,20,0.7);
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.3);
-    border: 1px solid rgba(0,255,255,0.1);
-    text-align: left;
+    max-width: 1000px;
+    margin: auto;
+    background: rgba(0,20,20,0.7);
+    padding: 25px;
+    border-radius: 12px;
+    border: 1px solid rgba(0,255,255,0.2);
 }
 
 .content-box h2 {
-    color: #00ffff;
+    color: cyan;
     margin-bottom: 15px;
-    border-bottom: 1px solid rgba(0,255,255,0.3);
-    padding-bottom: 8px;
-    font-size: 18px;
 }
 
-.content-box p, .content-box ul {
-    color: #cccccc;
-    font-size: 13px;
-    line-height: 1.6;
-}
-
-.content-box ul {
-    margin-left: 20px;
-}
-
-/* CONTACT SECTION */
+/* CONTACT */
 .split-container {
     display: flex;
-    flex-direction: row;
-    padding: 0 15px;
+    gap: 20px;
+    flex-wrap: wrap;
 }
 
 .left-side {
     flex: 1;
-    background: #000;
+    height: 350px;
+    border: 2px solid cyan;
     border-radius: 12px;
-    border: 2px solid rgba(0,255,255,0.3);
-    margin: 10px;
-    height: 400px;
 }
 
 .right-side {
     flex: 1;
-    margin: 10px;
-    padding: 20px;
-}
-
-.contact-info {
-    background-color: rgba(0,20,20,0.7);
-    padding: 15px 20px;
-    border-radius: 12px;
-    border: 1px solid rgba(0,255,255,0.15);
 }
 
 .contact-item {
     margin-bottom: 15px;
-    padding-bottom: 8px;
-    border-bottom: 1px solid rgba(0,255,255,0.15);
-    position: relative;
 }
 
 .contact-item h3 {
-    color: #00ffff;
-    font-size: 14px;
-    margin-bottom: 8px;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    position: relative;
-    padding-left: 50px;
+    color: cyan;
+    margin-bottom: 5px;
 }
 
-.contact-icon-container {
-    position: absolute;
-    left: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 35px;
-    height: 35px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.contact-icon-ring {
-    position: absolute;
-    width: 40px;
-    height: 40px;
-    border: 2px solid #00ffff;
-    border-radius: 50%;
-    box-shadow: 0 0 6px #00ffff;
-    opacity: 0.8;
-}
-
-.contact-item i {
-    position: relative;
-    z-index: 10;
-    color: #fff;
-    font-size: 18px;
-}
-
-.contact-item p {
-    color: #cccccc;
-    margin-left: 50px;
-    font-size: 13px;
-}
-
-/* WHATSAPP FLOATING BUTTON */
+/* WHATSAPP FLOAT */
 .whatsapp-btn {
     position: fixed;
-    bottom: 20px;
     right: 20px;
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    background-color: #25D366;
+    bottom: 20px;
+    background: #25D366;
     color: white;
     padding: 12px 18px;
     border-radius: 50px;
-    font-size: 14px;
     text-decoration: none;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.4);
     z-index: 999;
-}
-
-.whatsapp-btn:hover {
-    transform: scale(1.05);
-    box-shadow: 0 6px 18px rgba(0,0,0,0.4);
-}
-
-.whatsapp-btn i {
-    font-size: 18px;
 }
 </style>
 </head>
+
 <body>
 
-<!-- NAVIGATION BAR -->
+<!-- NAVBAR -->
 <nav class="navbar">
-    <div class="logo-space">
-        <div class="logo-placeholder">M&R Technoservice 22 LTD</div>
-    </div>
+    <div class="logo-placeholder">M&R Technoservice 22 LTD</div>
     <div class="nav-center">
-        <button class="nav-btn active" data-section="home">Home</button>
-        <button class="nav-btn" data-section="about">About</button>
-        <button class="nav-btn" data-section="catalog">Catalog</button>
-        <button class="nav-btn" data-section="services">Services</button>
-        <a href="M%26R%20TechnoService%2022%20LTD%20Hikvision%20price%20list.pdf.pdf" target="_blank" class="nav-btn">Price</a>
-        <button class="nav-btn" data-section="contact">Contact</button>
+        <button class="nav-btn" onclick="showSection('home')">Home</button>
+        <button class="nav-btn" onclick="showSection('about')">About</button>
+        <button class="nav-btn" onclick="showSection('catalog')">Catalog</button>
+        <button class="nav-btn" onclick="showSection('services')">Services</button>
+
+        <a href="M&R%20TechnoService%2022%20LTD%20Hikvision%20price%20list.pdf.pdf"
+           target="_blank"
+           class="nav-btn">
+           Price
+        </a>
+
+        <button class="nav-btn" onclick="showSection('contact')">Contact</button>
+
         <a href="https://wa.me/447849166141" target="_blank" class="nav-btn whatsapp-nav">
             <i class="fab fa-whatsapp"></i> WhatsApp
         </a>
     </div>
-    <div class="nav-right">
-        <button class="lang-btn active" onclick="changeLanguage('eng')" id="eng-btn">ENG</button>
-        <button class="lang-btn" onclick="changeLanguage('ru')" id="rus-btn">RUS</button>
-    </div>
 </nav>
 
 <!-- HEADER -->
-<header>
-    <h1>Welcome to Our IT, Restaurant & Security, CCTV Systems Solutions</h1>
+<header id="home">
+    <h1>Welcome to Our IT, Restaurant & Security Solutions</h1>
     <p>Reliable products and professional support for your business</p>
 </header>
 
-<!-- PAGE SECTIONS -->
-<div class="page-section active" id="home-section"></div>
-
-<div class="page-section" id="about-section">
-    <div class="content">
-        <div class="content-box">
-            <h2 data-translate="aboutTitle"></h2>
-            <p data-translate="aboutText1">
-                M&R Technoservice 22 LTD, established in 2025, specializes in IT security systems. Our core business includes providing high-quality cybersecurity solutions, network security, and system monitoring services. Despite being a newly established company, our professional team ensures reliable products and prompt support to maintain uninterrupted operations for our clients.
-            </p>
-            <p data-translate="aboutText2">
-                Our mission is to provide high-quality technical services, reliable products, and sustainable solutions. We are committed to delivering professional support and expert services to our clients.
-            </p>
-        </div>
+<!-- ABOUT -->
+<div class="page-section" id="about">
+    <div class="content-box">
+        <h2>About Us</h2>
+        <p>
+            M&R Technoservice 22 LTD, established in 2025, specializes in IT,
+            restaurant and security systems including CCTV and alarms.
+        </p>
     </div>
 </div>
 
-<div class="page-section" id="catalog-section">
-    <div class="content">
-        <div class="content-box">
-            <h2 data-translate="catalogTitle"></h2>
-            <p data-translate="catalogText">Main Product Categories in the Catalog:</p>
-            <ul>
-                <li data-translate="catalogItem1">IT Systems</li>
-                <li data-translate="catalogItem2">Restaurant Systems</li>
-                <li data-translate="catalogItem3">Security Systems</li>
-                <li data-translate="catalogItem4">Network Solutions and Accessories</li>
-                <li data-translate="catalogItem5">Software and Applications</li>
-                <li data-translate="catalogItem6">Hardware Components</li>
-                <li data-translate="catalogItem7">Technical Support Services</li>
-                <li data-translate="catalogItem8">Security and Monitoring Equipment, including:
-                    <ul style="margin-left: 20px; margin-top: 5px;">
-                        <li data-translate="catalogSubItem1">CCTV Cameras and Recorders</li>
-                        <li data-translate="catalogSubItem2">Alarm Systems and Sensors</li>
-                        <li data-translate="catalogSubItem3">Access Control Systems</li>
-                        <li data-translate="catalogSubItem4">POS and Restaurant Management Systems</li>
-                        <li data-translate="catalogSubItem5">Networking Cables and Switches</li>
-                    </ul>
-                </li>
-            </ul>
-        </div>
+<!-- CATALOG -->
+<div class="page-section" id="catalog">
+    <div class="content-box">
+        <h2>Catalog</h2>
+        <ul>
+            <li>IT Systems</li>
+            <li>Restaurant POS</li>
+            <li>CCTV & Alarm Systems</li>
+            <li>Networking Equipment</li>
+        </ul>
     </div>
 </div>
 
-<div class="page-section" id="services-section">
-    <div class="content">
-        <div class="content-box">
-            <h2 data-translate="servicesTitle"></h2>
-            <p data-translate="servicesText">Our main service areas are as follows:</p>
-            <ul>
-                <li data-translate="serviceItem1">Supply, Sales, and Installation of IT, Restaurant, and Security Systems</li>
-                <li data-translate="serviceItem2">Diagnostics, Inspection, and Maintenance of IT, Restaurant, and Security Equipment</li>
-                <li data-translate="serviceItem3">Service and Technical Support for IT, Restaurant, and Security Systems</li>
-                <li data-translate="serviceItem4">Sale and Prompt Delivery of Spare Parts for IT, Restaurant, and Security Systems</li>
-                <li data-translate="serviceItem5">Planned Maintenance and Emergency Support for IT, Restaurant, and Security Systems</li>
-                <li data-translate="serviceItem6">Technical Consultation and Solutions Tailored to Customer Requirements in IT, Restaurant, and Security Systems</li>
-            </ul>
-        </div>
+<!-- SERVICES -->
+<div class="page-section" id="services">
+    <div class="content-box">
+        <h2>Services</h2>
+        <ul>
+            <li>Installation</li>
+            <li>Maintenance</li>
+            <li>Technical Support</li>
+        </ul>
     </div>
 </div>
 
-<div class="page-section" id="contact-section">
+<!-- CONTACT -->
+<div class="page-section" id="contact">
     <div class="split-container">
-        <div class="left-side" id="cube-animation"></div>
-        <div class="right-side">
-            <div class="contact-info">
-                <div class="contact-item address-icon">
-                    <div class="contact-icon-container">
-                        <div class="contact-icon-ring"></div>
-                        <i class="fas fa-map-marker-alt"></i>
-                    </div>
-                    <h3>Address</h3>
-                    <p><strong>14 Pinewood Avenue, Aberdeen AB15 8NB, Scotland, UK</strong></p>
-                </div>
-                <div class="contact-item phone-icon">
-                    <div class="contact-icon-container">
-                        <div class="contact-icon-ring"></div>
-                        <i class="fas fa-phone"></i>
-                    </div>
-                    <h3>Phone</h3>
-                    <p><strong>01224 5477923</strong></p>
-                </div>
-                <div class="contact-item email-icon">
-                    <div class="contact-icon-container">
-                        <div class="contact-icon-ring"></div>
-                        <i class="fas fa-envelope"></i>
-                    </div>
-                    <h3>Email</h3>
-                    <p><strong>mr.techno.service.22@gmail.com</strong></p>
-                </div>
-                <div class="contact-item hours-icon">
-                    <div class="contact-icon-container">
-                        <div class="contact-icon-ring"></div>
-                        <i class="fas fa-clock"></i>
-                    </div>
-                    <h3>Working Hours</h3>
-                    <p><strong>Monday - Friday: 9:00 AM to 6:00 PM</strong></p>
-                </div>
+        <div class="left-side"></div>
+        <div class="right-side content-box">
+            <div class="contact-item">
+                <h3>Address</h3>
+                <p>14 Pinewood Avenue, Aberdeen AB15 8NB, Scotland, UK</p>
+            </div>
+            <div class="contact-item">
+                <h3>Phone</h3>
+                <p>01224 5477923</p>
+            </div>
+            <div class="contact-item">
+                <h3>Email</h3>
+                <p>mr.techno.service.22@gmail.com</p>
             </div>
         </div>
     </div>
 </div>
 
-<!-- FLOATING WHATSAPP BUTTON -->
+<!-- FLOATING WHATSAPP -->
 <a href="https://wa.me/447849166141" target="_blank" class="whatsapp-btn">
     <i class="fab fa-whatsapp"></i> Chat with us
 </a>
 
-<!-- THREE.JS CUBE SCRIPT -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 <script>
-// Three.js cube animation or other scripts burada olacaq
-</script>
-
-<!-- LANGUAGE SWITCH -->
-<script>
-const translations = { 
-    eng: {...}, 
-    ru: {...} 
-};
-
-function changeLanguage(lang){
-    document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
-    document.getElementById(lang+'-btn').classList.add('active');
-    document.querySelectorAll('[data-translate]').forEach(el=>{
-        const key = el.getAttribute('data-translate');
-        if(translations[lang][key]) el.innerHTML = translations[lang][key];
-    });
+function showSection(id) {
+    document.querySelectorAll('.page-section').forEach(s => s.classList.remove('active'));
+    if (document.getElementById(id)) {
+        document.getElementById(id).classList.add('active');
+        window.scrollTo(0, 0);
+    }
 }
 </script>
 
