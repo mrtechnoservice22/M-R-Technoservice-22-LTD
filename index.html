@@ -20,10 +20,9 @@ html, body {
 /* NAVBAR */
 .navbar {
     background-color: rgba(0,0,0,0.85);
-    padding: 10px 20px;
+    padding: 10px 40px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
     border-bottom: 1px solid rgba(0,255,255,0.2);
     position: fixed;
     width: 100%;
@@ -35,14 +34,16 @@ html, body {
     color: white;
     font-weight: bold;
     border: 2px solid cyan;
-    padding: 6px 12px;
+    padding: 6px 14px;
     border-radius: 10px;
     box-shadow: 0 0 10px cyan;
 }
 
+/* MENU LEFT SHIFT */
 .nav-center {
     display: flex;
-    gap: 8px;
+    gap: 10px;
+    margin-left: 40px;
     flex-wrap: wrap;
 }
 
@@ -51,7 +52,7 @@ html, body {
     color: white;
     border: 2px solid cyan;
     border-radius: 10px;
-    padding: 6px 14px;
+    padding: 6px 16px;
     cursor: pointer;
     font-size: 13px;
     text-decoration: none;
@@ -68,7 +69,7 @@ html, body {
     border-color: #25D366;
 }
 
-/* HEADER */
+/* HEADER (ONLY HOME) */
 header {
     background-image: url('https://pbs.twimg.com/media/FKokOGyWYAYqUao.jpg');
     background-size: cover;
@@ -85,19 +86,19 @@ header {
 header h1 {
     font-size: 3em;
     margin: 0;
-    color: #2f2f2f; /* TÜND BOZ */
+    color: #0f4f2f; /* TÜND YAŞIL */
 }
 
 header p {
-    font-size: 1.2em;
+    font-size: 1.3em;
     margin-top: 15px;
-    color: #444; /* TÜND BOZ */
+    color: #1e6b44; /* TÜND YAŞIL */
 }
 
 /* SECTIONS */
 .page-section {
     display: none;
-    padding: 110px 20px 40px;
+    padding: 140px 20px 60px;
 }
 
 .page-section.active {
@@ -107,162 +108,22 @@ header p {
 .content-box {
     max-width: 1000px;
     margin: auto;
-    background: rgba(0,20,20,0.7);
-    padding: 25px;
-    border-radius: 12px;
-    border: 1px solid rgba(0,255,255,0.2);
+    background: rgba(0,25,25,0.85);
+    padding: 35px;
+    border-radius: 14px;
+    border: 1px solid rgba(0,255,255,0.25);
 }
 
 .content-box h2 {
-    color: cyan;
-    margin-bottom: 15px;
+    color: #00ffaa;
+    font-size: 26px;
+    margin-bottom: 20px;
 }
 
-/* CONTACT */
-.split-container {
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
+.content-box p,
+.content-box li {
+    font-size: 17px;
+    line-height: 1.8;
 }
 
-.left-side {
-    flex: 1;
-    height: 350px;
-    border: 2px solid cyan;
-    border-radius: 12px;
-}
-
-.right-side {
-    flex: 1;
-}
-
-.contact-item {
-    margin-bottom: 15px;
-}
-
-.contact-item h3 {
-    color: cyan;
-    margin-bottom: 5px;
-}
-
-/* WHATSAPP FLOAT */
-.whatsapp-btn {
-    position: fixed;
-    right: 20px;
-    bottom: 20px;
-    background: #25D366;
-    color: white;
-    padding: 12px 18px;
-    border-radius: 50px;
-    text-decoration: none;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.4);
-    z-index: 999;
-}
-</style>
-</head>
-
-<body>
-
-<!-- NAVBAR -->
-<nav class="navbar">
-    <div class="logo-placeholder">M&R Technoservice 22 LTD</div>
-    <div class="nav-center">
-        <button class="nav-btn" onclick="showSection('home')">Home</button>
-        <button class="nav-btn" onclick="showSection('about')">About</button>
-        <button class="nav-btn" onclick="showSection('catalog')">Catalog</button>
-        <button class="nav-btn" onclick="showSection('services')">Services</button>
-
-        <a href="M&R%20TechnoService%2022%20LTD%20Hikvision%20price%20list.pdf.pdf"
-           target="_blank"
-           class="nav-btn">
-           Price
-        </a>
-
-        <button class="nav-btn" onclick="showSection('contact')">Contact</button>
-
-        <a href="https://wa.me/447849166141" target="_blank" class="nav-btn whatsapp-nav">
-            <i class="fab fa-whatsapp"></i> WhatsApp
-        </a>
-    </div>
-</nav>
-
-<!-- HEADER -->
-<header id="home">
-    <h1>Welcome to Our IT, Restaurant & Security Solutions</h1>
-    <p>Reliable products and professional support for your business</p>
-</header>
-
-<!-- ABOUT -->
-<div class="page-section" id="about">
-    <div class="content-box">
-        <h2>About Us</h2>
-        <p>
-            M&R Technoservice 22 LTD, established in 2025, specializes in IT,
-            restaurant and security systems including CCTV and alarms.
-        </p>
-    </div>
-</div>
-
-<!-- CATALOG -->
-<div class="page-section" id="catalog">
-    <div class="content-box">
-        <h2>Catalog</h2>
-        <ul>
-            <li>IT Systems</li>
-            <li>Restaurant POS</li>
-            <li>CCTV & Alarm Systems</li>
-            <li>Networking Equipment</li>
-        </ul>
-    </div>
-</div>
-
-<!-- SERVICES -->
-<div class="page-section" id="services">
-    <div class="content-box">
-        <h2>Services</h2>
-        <ul>
-            <li>Installation</li>
-            <li>Maintenance</li>
-            <li>Technical Support</li>
-        </ul>
-    </div>
-</div>
-
-<!-- CONTACT -->
-<div class="page-section" id="contact">
-    <div class="split-container">
-        <div class="left-side"></div>
-        <div class="right-side content-box">
-            <div class="contact-item">
-                <h3>Address</h3>
-                <p>14 Pinewood Avenue, Aberdeen AB15 8NB, Scotland, UK</p>
-            </div>
-            <div class="contact-item">
-                <h3>Phone</h3>
-                <p>01224 5477923</p>
-            </div>
-            <div class="contact-item">
-                <h3>Email</h3>
-                <p>mr.techno.service.22@gmail.com</p>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- FLOATING WHATSAPP -->
-<a href="https://wa.me/447849166141" target="_blank" class="whatsapp-btn">
-    <i class="fab fa-whatsapp"></i> Chat with us
-</a>
-
-<script>
-function showSection(id) {
-    document.querySelectorAll('.page-section').forEach(s => s.classList.remove('active'));
-    if (document.getElementById(id)) {
-        document.getElementById(id).classList.add('active');
-        window.scrollTo(0, 0);
-    }
-}
-</script>
-
-</body>
-</html>
+/* CO*
