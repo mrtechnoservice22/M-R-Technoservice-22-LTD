@@ -47,6 +47,25 @@ header#home p { font-size: 1.2em; text-shadow: 0 0 6px black; margin-top: 10px; 
 .page-section.active { display: block; }
 .content-box { max-width: 1000px; margin: 0 auto 30px auto; background-color: rgba(0,20,20,0.7); padding: 30px; border-radius: 12px; font-size: 18px; line-height: 1.8; }
 
+/* Products grid */
+.products{
+    display:grid; 
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:25px; 
+}
+.product{
+    background:#111; 
+    border-radius:12px; 
+    overflow:hidden; 
+    box-shadow:0 6px 15px rgba(0,0,0,0.3); 
+    padding:10px;
+    transition:0.3s;
+}
+.product:hover{ transform:translateY(-5px); }
+.product img{ width:100%; height:210px; object-fit:contain; }
+.product h3{ color:#fff; text-align:center; margin:10px 0 5px 0; font-size:18px; }
+.product p{ color:#ccc; text-align:center; font-size:14px; }
+
 /* FLOATING BUTTONS */
 .floating-buttons { position: fixed; bottom: 20px; right: 20px; display: flex; gap: 10px; z-index: 999; }
 .whatsapp-btn, .email-btn {
@@ -77,7 +96,7 @@ header#home p { font-size: 1.2em; text-shadow: 0 0 6px black; margin-top: 10px; 
     <div class="nav-links">
         <button class="nav-btn active" data-section="home">Home</button>
         <button class="nav-btn" data-section="about">About</button>
-        <button class="nav-btn" data-section="catalog">Catalog</button>
+        <button class="nav-btn" data-section="catalog">Products</button>
         <button class="nav-btn" data-section="services">Services</button>
         <button class="nav-btn" data-section="price">Price</button>
         <button class="nav-btn" data-section="contact">Contact</button>
@@ -101,14 +120,64 @@ header#home p { font-size: 1.2em; text-shadow: 0 0 6px black; margin-top: 10px; 
 
 <div id="catalog" class="page-section">
     <div class="content-box">
-        <h2>Catalog</h2>
-        <ul>
-            <li>IT Systems</li>
-            <li>Restaurant Systems</li>
-            <li>Security Systems</li>
-            <li>Network Solutions and Accessories</li>
-            <li>CCTV systems</li>
-        </ul>
+        <h2>Our Products</h2>
+        <div class="products">
+            <!-- Access Control -->
+            <div class="product">
+                <img src="https://www.nicepng.com/png/detail/381-3817395_access-control-system.png" alt="Access Control System">
+                <h3>Access Control System</h3>
+                <p>Secure entry and exit management solutions.</p>
+            </div>
+
+            <!-- Thermal Paper -->
+            <div class="product">
+                <img src="https://s.alicdn.com/@sc04/kf/Heddf8af0602546f8b7e41100e49eba23Y/Thermal-Paper-Rolls-Papel-Termico-80-X-80mm-for-Cash-Register-Printer-Paper-Atm-Receipt-Paper-Roll-Thermal.jpg_300x300.jpg" alt="Thermal Paper">
+                <h3>Thermal Paper</h3>
+                <p>High quality thermal paper rolls for POS printers.</p>
+            </div>
+
+            <!-- Face Recognition -->
+            <div class="product">
+                <img src="https://r2.ucuztap.az/a/7001639/md/62ff2a2b7defc.jpg" alt="Face Recognition System">
+                <h3>Face Recognition System</h3>
+                <p>Advanced biometric identification technology.</p>
+            </div>
+
+            <!-- Barrier Gate -->
+            <div class="product">
+                <img src="https://insaat.az/uploads/news/cee3e4a6293feeb36dc6931d95f7b8f8.jpg" alt="Barrier Gate System">
+                <h3>Barrier Gate System</h3>
+                <p>Automatic vehicle access control barriers.</p>
+            </div>
+
+            <!-- CCTV -->
+            <div class="product">
+                <img src="https://e7.pngegg.com/pngimages/375/875/png-clipart-cctv-camera-system-closed-circuit-television-camera-wireless-security-camera-security-alarms-systems-cctv-electronics-home-security-thumbnail.png" alt="CCTV Camera">
+                <h3>CCTV Camera</h3>
+                <p>Professional surveillance and monitoring systems.</p>
+            </div>
+
+            <!-- Smart Home Systems -->
+            <div class="product">
+                <img src="https://www.security.org/app/uploads/2024/05/simplisafe-system-all-devices-1.jpg" alt="Smart Home Systems">
+                <h3>Smart Home Systems</h3>
+                <p>Modern intelligent home automation solutions.</p>
+            </div>
+
+            <!-- Alarm Systems -->
+            <div class="product">
+                <img src="https://i5.walmartimages.com/seo/Home-Alarm-System-Security-Security-Camera-Wireless-15-Piece-Kit-DIY-WiFi-4G-Touch-Panel-Doorbell-Motion-Door-Alarm-Sensor-Smart-Home-Burglar-Alarm-S_41c91e30-b228-4972-aa78-72a645ed59ee.11ab375e9dd42c018fc5270f8a5ffb5a.jpeg" alt="Alarm Systems">
+                <h3>Alarm Systems</h3>
+                <p>Reliable alarm system solutions for safety and peace of mind.</p>
+            </div>
+
+            <!-- Restaurant Systems -->
+            <div class="product">
+                <img src="https://www.clopos.com/images/clopos-restaurant-pos-system-and-software.png" alt="Restaurant Systems">
+                <h3>Restaurant Systems</h3>
+                <p>Efficient POS systems tailored for restaurant management.</p>
+            </div>
+        </div>
     </div>
 </div>
 
@@ -116,13 +185,16 @@ header#home p { font-size: 1.2em; text-shadow: 0 0 6px black; margin-top: 10px; 
     <div class="content-box">
         <h2>Services</h2>
         <ul>
-           <li><strong>Supply, Sales, and Installation:</strong> We provide high-quality IT, restaurant, and security systems, delivering all necessary equipment and performing professional installation to ensure your systems are fully operational.</li>
-            <li><strong>Diagnostics and Maintenance:</strong> Our team conducts thorough diagnostics to identify any issues, and provides regular maintenance to ensure your systems run smoothly and reliably.</li>
-            <li><strong>Technical Support:</strong> We offer prompt technical support, troubleshooting, and on-site assistance whenever necessary, keeping your business operations uninterrupted.</li>
-            <li><strong>System Upgrades:</strong> We help you upgrade and expand your existing systems, integrating new technologies to meet your evolving business needs.</li>
-            <li><strong>Online Monitoring via Phone:</strong> Our security systems allow you to monitor your premises remotely through your smartphone or tablet, giving you real-time access and peace of mind anywhere, anytime.</li>
-            <li><strong>Small Business Specialist Solutions:</strong> We provide tailored solutions specifically designed for small businesses, ensuring cost-effective, reliable, and scalable IT and security systems that meet the unique needs of growing enterprises.</li>
+            <li>Supply, Sales, Installation</li>
+            <li>Diagnostics, Maintenance</li>
         </ul>
+    </div>
+</div>
+
+<div id="price" class="page-section">
+    <div class="content-box">
+        <h2>Price List</h2>
+        <p><a href="M%26R%20TechnoService%2022%20LTD%20Hikvision%20price%20list.pdf.pdf" target="_blank" style="color: cyan;">Download Price List PDF</a></p>
     </div>
 </div>
 
@@ -183,14 +255,9 @@ const navLinks = document.querySelector('.nav-links');
 
 navButtons.forEach(btn => {
     btn.addEventListener('click', () => {
-        const section = btn.getAttribute('data-section');
-        if(section === 'price') {
-            // Price üçün yeni tabda PDF aç
-            window.open('M%26R%20TechnoService%2022%20LTD%20Hikvision%20price%20list.pdf.pdf', '_blank');
-            return;
-        }
         navButtons.forEach(b => b.classList.remove('active'));
         btn.classList.add('active');
+        const section = btn.getAttribute('data-section');
         sections.forEach(sec => sec.classList.remove('active'));
         if(section) document.getElementById(section).classList.add('active');
         window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -198,6 +265,7 @@ navButtons.forEach(btn => {
     });
 });
 
+// Hamburger toggle
 hamburger.addEventListener('click', () => {
     navLinks.classList.toggle('show');
 });
@@ -205,3 +273,4 @@ hamburger.addEventListener('click', () => {
 
 </body>
 </html>
+
