@@ -7,7 +7,231 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
 <style>
 html, body {
+    margin: 0; pa<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>M&R IT Security Solutions</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+<style>
+html, body {
     margin: 0; padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #000; color: #e0e0e0;
+    overflow-x: hidden;
+}
+/* NAVBAR */
+.navbar {
+    background-color: rgba(0,0,0,0.8);
+    padding: 10px 20px;
+    display: flex; align-items: center; justify-content: space-between;
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    flex-wrap: wrap;
+}
+.nav-logo { color: white; font-weight: bold; border: 2px solid cyan; padding: 6px 12px; border-radius: 10px; }
+.nav-links { display: flex; gap: 8px; flex-wrap: wrap; }
+.nav-btn {
+    display: inline-flex; justify-content: center; align-items: center; gap: 4px;
+    background-color: rgba(0,0,0,0.8); color: white; border: 2px solid cyan;
+    border-radius: 10px; padding: 6px 12px; font-weight: bold; cursor: pointer;
+    font-size: 13px; text-decoration: none; width: auto; box-sizing: border-box;
+}
+.nav-btn:hover { background-color: cyan; color: black; transform: scale(1.05); }
+.nav-btn.active { background-color: black; color: white; border-color: yellow; box-shadow: 0 0 10px yellow; }
+.hamburger { display: none; font-size: 24px; cursor: pointer; color: white; }
+
+/* HEADER */
+header#home {
+    background-image: url('https://www.hi-systems.at/images/userfiles/image/Hikvision-Video%C3%BCberwachung-Netzwerk-Kameras.jpg');
+    background-position: center top; 
+    background-size: cover;
+    width: 100%; height: 100vh; display: flex; justify-content: center; align-items: center; text-align: center;
+    color: #99ff99; flex-direction: column; padding: 0; box-sizing: border-box;
+}
+header#home h1 { font-size: 2.5em; margin: 0; text-shadow: 0 0 10px black; }
+header#home p { font-size: 1.2em; text-shadow: 0 0 6px black; margin-top: 10px; }
+
+/* PAGE SECTIONS */
+.page-section { display: none; padding: 50px 20px; background: none; }
+.page-section.active { display: block; }
+.content-box { max-width: 1000px; margin: 0 auto 30px auto; background-color: rgba(0,20,20,0.7); padding: 30px; border-radius: 12px; font-size: 18px; line-height: 1.8; }
+
+/* Products grid */
+.products{
+    display:grid; 
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:25px; 
+}
+.product{
+    background:#111; 
+    border-radius:12px; 
+    overflow:hidden; 
+    box-shadow:0 6px 15px rgba(0,0,0,0.3); 
+    padding:10px;
+    transition:0.3s;
+}
+.product:hover{ transform:translateY(-5px); }
+.product img{ width:100%; height:210px; object-fit:contain; }
+.product h3{ color:#fff; text-align:center; margin:10px 0 5px 0; font-size:18px; }
+.product p{ color:#ccc; text-align:center; font-size:14px; }
+
+/* FLOATING BUTTONS */
+.floating-buttons { position: fixed; bottom: 20px; right: 20px; display: flex; gap: 10px; z-index: 999; }
+.whatsapp-btn, .email-btn {
+    display: inline-flex; align-items: center; gap: 6px; padding: 12px 18px; border-radius: 50px;
+    font-size: 14px; text-decoration: none; box-shadow: 0 4px 12px rgba(0,0,0,0.3); transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.whatsapp-btn { background-color: #25D366; color: white; }
+.email-btn { background-color: #00c851; color: white; }
+.whatsapp-btn:hover, .email-btn:hover { transform: scale(1.05); box-shadow: 0 6px 18px rgba(0,0,0,0.4); }
+
+/* MEDIA QUERIES - MOBILE */
+@media (max-width: 768px){
+    .hamburger { display: block; }
+    .nav-links { flex-direction: column; width: 100%; display: none; margin-top: 10px; }
+    .nav-links.show { display: flex; }
+    .nav-links .nav-btn { width: 100%; text-align: center; padding: 12px 0; }
+    header#home h1 { font-size: 2em; }
+    header#home p { font-size: 1em; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<div class="navbar">
+    <div class="nav-logo">M&R Technoservice 22 LTD</div>
+    <div class="hamburger"><i class="fas fa-bars"></i></div>
+    <div class="nav-links">
+        <button class="nav-btn active" data-section="home">Home</button>
+        <button class="nav-btn" data-section="about">About</button>
+        <button class="nav-btn" data-section="catalog">Products</button>
+        <button class="nav-btn" data-section="services">Services</button>
+        <button class="nav-btn" data-section="price">Price</button>
+        <button class="nav-btn" data-section="contact">Contact</button>
+        <button class="nav-btn" data-section="certificates">Certificates</button>
+        <button class="nav-btn" data-section="terms">Terms & Conditions</button>
+    </div>
+</div>
+
+<!-- HEADER -->
+<header id="home" class="page-section active">
+    <h1>Welcome to Our IT, Restaurant & Security Solutions</h1>
+    <p>Reliable products and professional support for your business</p>
+</header>
+
+<!-- PAGE SECTIONS -->
+<div id="about" class="page-section">
+    <div class="content-box">
+        <h2>About Us</h2>
+        <p>M&R Technoservice 22 LTD, established in 2025, is a leading provider of comprehensive IT, security, and restaurant management solutions...</p>
+    </div>
+</div>
+
+<div id="catalog" class="page-section">
+    <div class="content-box">
+        <h2>Our Products</h2>
+        <div class="products">
+            <!-- Product items (sən əvvəllər verdiyin şəkillər və təsvirlər burda qalır) -->
+        </div>
+    </div>
+</div>
+
+<div id="services" class="page-section">
+    <div class="content-box">
+        <h2>Services</h2>
+        <ul>
+            <li>Supply, Sales, and Installation</li>
+            <li>Diagnostics and Maintenance</li>
+            <li>Remote Monitoring and Support</li>
+            <li>Phone and Online Assistance</li>
+            <li>Customized Solutions</li>
+            <li>Training and User Guidance</li>
+            <li>Upgrades and System Expansion</li>
+        </ul>
+    </div>
+</div>
+
+<div id="price" class="page-section">
+    <div class="content-box">
+        <h2>Price List</h2>
+        <p>Click the Price button in the menu to open the PDF directly.</p>
+    </div>
+</div>
+
+<div id="contact" class="page-section">
+    <div class="content-box">
+        <h2>Contact</h2>
+        <p><strong>Address:</strong> 14 Pinewood Avenue, Aberdeen AB15 8NB, Scotland, UK</p>
+        <p><strong>Phone:</strong> 01224 5477923</p>
+        <p><strong>Email:</strong> mr.techno.service.22@gmail.com</p>
+        <p><strong>Working Hours:</strong> 24/7</p>
+    </div>
+</div>
+
+<div id="terms" class="page-section">
+    <div class="content-box">
+        <h2>Terms & Conditions</h2>
+        <ol>
+            <li>Service Overview</li>
+            <li>Installation Terms</li>
+            <li>Service and Maintenance Charges</li>
+            <li>24/7 Availability</li>
+            <li>Customer Obligations</li>
+            <li>Liability</li>
+            <li>Payments</li>
+            <li>Termination</li>
+        </ol>
+    </div>
+</div>
+
+<!-- FLOATING BUTTONS -->
+<div class="floating-buttons">
+    <a href="https://wa.me/447849166141" target="_blank" class="whatsapp-btn"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+    <a href="mailto:mr.techno.service.22@gmail.com" target="_blank" class="email-btn"><i class="fas fa-envelope"></i> Email</a>
+</div>
+
+<!-- SCRIPT -->
+<script>
+const sections = document.querySelectorAll('.page-section');
+const navButtons = document.querySelectorAll('.nav-btn');
+const hamburger = document.querySelector('.hamburger');
+const navLinks = document.querySelector('.nav-links');
+
+navButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+        navButtons.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const section = btn.getAttribute('data-section');
+
+        if(section === 'price') {
+            window.open('M%26R%20TechnoService%2022%20LTD%20Hikvision%20price%20list.pdf.pdf', '_blank');
+            return;
+        }
+
+        if(section === 'certificates') {
+            window.open('certificates.html', '_blank');
+            return;
+        }
+
+        sections.forEach(sec => sec.classList.remove('active'));
+        if(section) document.getElementById(section).classList.add('active');
+        if(section === 'home') document.getElementById('home').style.display = 'flex';
+        else document.getElementById('home').style.display = 'none';
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+        navLinks.classList.remove('show');
+    });
+});
+
+hamburger.addEventListener('click', () => {
+    navLinks.classList.toggle('show');
+});
+</script>
+
+</body>
+</html>
+dding: 0;
     font-family: Arial, sans-serif;
     background-color: #000; color: #e0e0e0;
     overflow-x: hidden;
