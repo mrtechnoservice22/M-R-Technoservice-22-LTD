@@ -36,13 +36,19 @@ html, body {
 /* HEADER */
 header#home {
     background-image: url('https://raw.githubusercontent.com/mrtechnoservice22/M-R-Technoservice-22-LTD/main/unv%20hikvision.png.png');
-    background-position: center top; 
-    background-size: 100% auto; /* eni tam, hündürlük avtomatik */
+    background-position: center center; 
+    background-size: contain; /* şəkilin tam görünməsi */
     background-repeat: no-repeat;
-    width: 100%; height: 80vh; /* əvvəl 100vh idi, indi 20% yığcam oldu */
-    display: flex; justify-content: center; align-items: center; text-align: center;
+    width: 100%; 
+    height: 70vh; /* hündürlük azaldıldı */
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    text-align: center;
     color: #FFD700; 
-    flex-direction: column; padding: 0; box-sizing: border-box;
+    flex-direction: column; 
+    padding: 0; 
+    box-sizing: border-box;
 }
 header#home h1 { font-size: 2.5em; margin: 0; text-shadow: 0 0 10px black; color: #FFD700; }
 header#home p { font-size: 1.2em; text-shadow: 0 0 6px black; margin-top: 10px; color: #FFD700; }
@@ -89,7 +95,6 @@ header#home p { font-size: 1.2em; text-shadow: 0 0 6px black; margin-top: 10px; 
     .nav-links .nav-btn { width: 100%; text-align: center; padding: 12px 0; }
     header#home h1 { font-size: 2em; }
     header#home p { font-size: 1em; }
-    header#home { background-size: 100% auto; background-position: center top; height: 80vh; }
 }
 </style>
 </head>
