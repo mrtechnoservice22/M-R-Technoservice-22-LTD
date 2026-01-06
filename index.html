@@ -35,20 +35,38 @@ html, body {
 .hamburger { display: none; font-size: 24px; cursor: pointer; color: white; }
 
 /* HEADER */
+<!-- HEADER -->
+<header id="home" class="page-section active">
+    <h1>Welcome to Our IT, Restaurant & Security Solutions</h1>
+    <p>Reliable products and professional support for your business</p>
+</header>
+
+<style>
 header#home {
-    <div class="image-section">
-    <img src="https://raw.githubusercontent.com/mrtechnoservice22/M-R-Technoservice-22-LTD/main/unv%20hikvivision%20Dahua%20sayt%20ucun%20sekil.png" 
-         alt="UNV Hikvision Dahua" 
-         style="width:100%; height:auto;">
-</div>
-    background-position: center top; 
-    background-size: cover;
-    width: 100%; height: 100vh; display: flex; justify-content: center; align-items: center; text-align: center;
+    background-image: url('https://raw.githubusercontent.com/mrtechnoservice22/M-R-Technoservice-22-LTD/main/unv%20hikvivision%20Dahua%20sayt%20ucun%20sekil.png');
+    background-position: center; 
+    background-size: cover; /* bütün ekranı doldurur */
+    background-repeat: no-repeat;
+    width: 100%; 
+    height: 100vh; /* ekran hündürlüyü */
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    text-align: center;
     color: #FFD700; /* Tünd sarı rəng */
-    flex-direction: column; padding: 0; box-sizing: border-box;
+    flex-direction: column; 
+    padding: 0; 
+    box-sizing: border-box;
 }
 header#home h1 { font-size: 2.5em; margin: 0; text-shadow: 0 0 10px black; color: #FFD700; }
 header#home p { font-size: 1.2em; text-shadow: 0 0 6px black; margin-top: 10px; color: #FFD700; }
+
+/* Mobile */
+@media (max-width: 768px){
+    header#home h1 { font-size: 2em; }
+    header#home p { font-size: 1em; }
+}
+</style>
 
 /* PAGE SECTIONS */
 .page-section { display: none; padding: 50px 20px; background: none; }
